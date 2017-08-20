@@ -47,12 +47,12 @@
                                 <name>My App</name>
                                 <icons>
                                     <!--FILLMEIN - OPTIONAL-->
-                                    <icon>${basedir}/src/main/images/myapp.png</icon>
+                                    <icon>${basedir}/src/main/resources/images/myapp.png</icon>
                                 </icons>
                                 <!--FILLMEIN - OPTIONAL-->
-                                <progressImage>${basedir}/src/main/images/progress.png</progressImage>
+                                <progressImage>${basedir}/src/main/resources/images/progress.png</progressImage>
                                 <!--FILLMEIN - OPTIONAL-->
-                                <backgroundImage>${basedir}/src/main/images/splash.png</backgroundImage>
+                                <backgroundImage>${basedir}/src/main/resources/images/splash.png</backgroundImage>
                                 <!--FILLMEIN - OPTIONAL-->
                                 <progress>80, 244, 196, 11</progress>
                                 <!--FILLMEIN - OPTIONAL-->
