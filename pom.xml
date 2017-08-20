@@ -45,24 +45,18 @@
                             <ui>
                                 <!--FILLMEIN - REQUIRED-->
                                 <name>My App</name>
-                                <icons>
-                                    <!--FILLMEIN - OPTIONAL-->
-                                    <icon>${basedir}/src/main/resources/images/myapp.png</icon>
-                                </icons>
-                                <!--FILLMEIN - OPTIONAL-->
-                                <progressImage>${basedir}/src/main/resources/images/progress.png</progressImage>
-                                <!--FILLMEIN - OPTIONAL-->
-                                <backgroundImage>${basedir}/src/main/resources/images/splash.png</backgroundImage>
-                                <!--FILLMEIN - OPTIONAL-->
-                                <progress>80, 244, 196, 11</progress>
-                                <!--FILLMEIN - OPTIONAL-->
-                                <progressText>FFFFFF</progressText>
-                                <!--FILLMEIN - OPTIONAL-->
-                                <statusText>FFFFFF</statusText>
-                                <!--FILLMEIN - OPTIONAL-->
-                                <status>20, 170, 316, 64</status>
-                                <!--FILLMEIN - OPTIONAL-->
-                                <textShadow>111111</textShadow>
+
+                                <!--OPTIONAL CONFIGURATION:-->
+                                <!--<icons>-->
+                                    <!--<icon>${basedir}/src/main/resources/images/myapp.png</icon>-->
+                                <!--</icons>-->
+                                <!--<progressImage>${basedir}/src/main/resources/images/progress.png</progressImage>-->
+                                <!--<backgroundImage>${basedir}/src/main/resources/images/splash.png</backgroundImage>-->
+                                <!--<progress>80, 244, 196, 11</progress>-->
+                                <!--<progressText>FFFFFF</progressText>-->
+                                <!--<statusText>FFFFFF</statusText>-->
+                                <!--<status>20, 170, 316, 64</status>-->
+                                <!--<textShadow>111111</textShadow>-->
                             </ui>
                         </configuration>
                     </execution>

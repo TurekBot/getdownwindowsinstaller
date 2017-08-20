@@ -6,6 +6,7 @@ Shows how to package your application in an installer along side getdown. Getdow
 1. You need to install NSIS for generating the native installer.
     1. http://nsis.sourceforge.net/Download
 1. Fill in, change, or comment out anything in `pom.xml` that is labeled with `FILLMEIN`.
+1. Replace all instances of the string "MyApp" in `nsis\myapp.nsi` with the name of your app.
 1. Run `mvn package`
 1. This will generate 3 folders: *getdown*, *getdown-stub*, and *getdown-applet*
     1. The *getdown* folder contains everything that getdown needs in order to perform an update.
