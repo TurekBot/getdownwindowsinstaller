@@ -10,16 +10,16 @@
 ;General
 
   ;Name and file
-  Name "MyApp"
+  Name "${PROJECT_NAME}"
   
   ; Handled by plugin
-  ;OutFile "${PROJECT_BUILD_DIR}\SetupMyApp.exe"
+  ;OutFile "${PROJECT_BUILD_DIR}\Setup${PROJECT_NAME}.exe"
 
   ;Default installation folder
-  InstallDir "$LOCALAPPDATA\MyApp"
+  InstallDir "$LOCALAPPDATA\${PROJECT_NAME}"
   
   ;Get installation folder from registry if available
-  InstallDirRegKey HKCU "Software\MyApp" ""
+  InstallDirRegKey HKCU "Software\${PROJECT_NAME}" ""
 
   ;Request application privileges for Windows Vista
   RequestExecutionLevel user
@@ -47,8 +47,8 @@
 
 ;Start Menu Folder Page Configuration
   !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKCU" 
-  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\MyApp" 
-  !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "MyApp"
+  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\${PROJECT_NAME}"
+  !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "${PROJECT_NAME}"
   
   !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
 
@@ -56,7 +56,7 @@
   !define MUI_FINISHPAGE_NOAUTOCLOSE
   !define MUI_FINISHPAGE_RUN
   !define MUI_FINISHPAGE_RUN_NOTCHECKED
-  !define MUI_FINISHPAGE_RUN_TEXT "Start MyApp Now"
+  !define MUI_FINISHPAGE_RUN_TEXT "Start ${PROJECT_NAME} Now"
   !define MUI_FINISHPAGE_RUN_FUNCTION "LaunchLink"
   !define MUI_FINISHPAGE_SHOWREADME_NOTCHECKED
   !define MUI_FINISHPAGE_SHOWREADME $INSTDIR\readme.txt
@@ -74,7 +74,7 @@
 ;--------------------------------
 ;Installer Sections
 
-Section "MyApp" MyApp
+Section "${PROJECT_NAME}" MyApp
 
   SetOutPath "$INSTDIR"
   
@@ -86,24 +86,31 @@ Section "MyApp" MyApp
   File Readme.txt
   
   ;Store installation folder
-  WriteRegStr HKCU "Software\MyApp" "" $INSTDIR
+  WriteRegStr HKCU "Software\${PROJECT_NAME}" "" $INSTDIR
   
   ;Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
   ;Create shortcuts
+
+  ;Start Menu Shortcut
   CreateDirectory "$SMPROGRAMS\$StartMenuFolder"
-  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\MyApp.lnk" "$INSTDIR\getdown.jar" \
+  CreateShortCut "$SMPROGRAMS\$StartMenuFolder\${PROJECT_NAME}.lnk" "$INSTDIR\getdown.jar" \
 	"." \
-	$INSTDIR\myapp.ico 0 SW_SHOWNORMAL ALT|CONTROL|SHIFT|U "MyApp"
+	$INSTDIR\myapp.ico 0 SW_SHOWNORMAL ALT|CONTROL|SHIFT|U "${PROJECT_NAME}"
   CreateShortCut "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
+
+  ;Desktop Shortcut
+  CreateShortCut "$DESKTOP\${PROJECT_NAME}.lnk" "$INSTDIR\getdown.jar" \
+	"." \
+	$INSTDIR\myapp.ico 0 SW_SHOWNORMAL ALT|CONTROL|SHIFT|U "${PROJECT_NAME}"
 SectionEnd
 
 ;--------------------------------
 ;Descriptions
 
   ;Language strings
-  LangString DESC_MyApp ${LANG_ENGLISH} "MyApp."
+  LangString DESC_MyApp ${LANG_ENGLISH} "${PROJECT_NAME}"
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -127,10 +134,10 @@ Section "Uninstall"
   !insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
     
   Delete "$SMPROGRAMS\$StartMenuFolder\Uninstall.lnk"
-  Delete "$SMPROGRAMS\$StartMenuFolder\MyApp.lnk"
+  Delete "$SMPROGRAMS\$StartMenuFolder\${PROJECT_NAME}.lnk"
   RMDir "$SMPROGRAMS\$StartMenuFolder"
 
-  DeleteRegKey /ifempty HKCU "Software\MyApp"
+  DeleteRegKey /ifempty HKCU "Software\${PROJECT_NAME}"
 
 SectionEnd
 
@@ -142,5 +149,5 @@ Function licpageshow
 FunctionEnd
 
 Function LaunchLink
-  ExecShell "" "$SMPROGRAMS\$StartMenuFolder\MyApp.lnk"
+  ExecShell "" "$SMPROGRAMS\$StartMenuFolder\${PROJECT_NAME}.lnk"
 FunctionEnd

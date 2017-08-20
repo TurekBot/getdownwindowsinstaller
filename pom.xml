@@ -3,6 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <!--FILLMEIN - REQUIRED-->
     <artifactId>getdown-windows-installer</artifactId>
+
+
     <!--FILLMEIN - REQUIRED-->
     <name>Getdown with Windows Installer</name>
     <!--FILLMEIN - REQUIRED-->
@@ -88,7 +90,7 @@
                         </goals>
                         <configuration>
                             <!--Default Value: C:/Program Files/NSIS/makensis.exe-->
-                            <!--<makensisBin>C:/A/Different/Installation/Path/NSIS/makensis.exe</makensisBin>-->
+                            <!--<makensisBin>C:/Program Files (x86)/NSIS/makensis.exe</makensisBin>-->
                             <!--The name of the installer-->
                             <outputFile>${project.name}-installer.exe</outputFile>
                             <!--Configures the NSIS installer. See NSIS documentation.-->
