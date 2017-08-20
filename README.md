@@ -25,3 +25,6 @@ Shows how to package your application in an installer along side getdown. Getdow
     1. Make sure it's placed exactly at `appbase`
 1. Open up the application from the start menu
 1. Watch your program update itself.
+
+### [Getdown](https://github.com/threerings/getdown/wiki) ###
+* To learn how Getdown works see the [Getdown documentation](https://github.com/threerings/getdown/wiki)
