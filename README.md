@@ -3,7 +3,7 @@
 Shows how to package your application in an installer along side getdown. Getdown will update the app each time the app is opened.
 
 ### To get started ###
-1. Clone or download this repository ![clone/download button](https://i.imgur.com/sgGdWjE.png)
+1. Clone or download this repository (or copy the structure)
 1. You need to install NSIS for generating the native installer.
     1. http://nsis.sourceforge.net/Download
 1. Fill in, change, or comment out anything in `pom.xml` that is labeled with `FILLMEIN`.
