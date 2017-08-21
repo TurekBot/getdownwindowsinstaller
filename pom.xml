@@ -6,7 +6,7 @@
 
 
     <!--FILLMEIN - REQUIRED-->
-    <name>Getdown with Windows Installer</name>
+    <name>Updatable App</name>
     <!--FILLMEIN - REQUIRED-->
     <description>Example POM that builds update directory and a native installer for Windows</description>
     <!--FILLMEIN - REQUIRED-->
