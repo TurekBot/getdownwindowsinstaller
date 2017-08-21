@@ -94,7 +94,7 @@
                             <!--The name of the installer-->
                             <outputFile>${project.name}-installer.exe</outputFile>
                             <!--Configures the NSIS installer. See NSIS documentation.-->
-                            <scriptFile>src/main/nsis/myapp.nsi</scriptFile>
+                            <scriptFile>src/main/nsis/installationConfiguration.nsi</scriptFile>
                         </configuration>
                     </execution>
                 </executions>
