@@ -73,7 +73,6 @@
                         put the path to makensis.exe in-between the <makensisBin> tags-->
             <!-- * Put a license in License.txt-->
             <!-- * Put some instructions for the user in Readme.txt-->
-            <!-- * Replace all instances of "MyApp" in myapp.nsi with the name of your application.-->
             <!-- * myapp.ico, myappbanner.bmp, and myappsmall.ico can be changed as long as any reference to them in
                     in myapp.nsi is changed as well.-->
 
