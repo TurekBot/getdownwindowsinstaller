@@ -30,7 +30,7 @@
             <plugin>
                 <groupId>org.icestuff</groupId>
                 <artifactId>getdown-maven-plugin</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.3-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -110,8 +110,8 @@
     </build>
     <pluginRepositories>
         <pluginRepository>
-            <id>taw-repo</id>
-            <url>http://files.theanubianwar.com/maven/snapshots/</url>
+            <id>getdown-maven-plugin-mvn-repo</id>
+            <url>https://raw.github.com/rockfireredmoon/getdown-maven-plugin/mvn-repo/</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
