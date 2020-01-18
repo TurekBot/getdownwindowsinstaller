@@ -97,7 +97,7 @@
                         </goals>
                         <configuration>
                             <!--Default Value: C:/Program Files/NSIS/makensis.exe-->
-                            <makensisBin>C:\Program Files\NSIS\makensis.exe</makensisBin>
+                            <!-- <makensisBin>C:\Program Files\NSIS\makensis.exe</makensisBin> -->
                             <!--The name of the installer-->
                             <outputFile>${project.name}-installer.exe</outputFile>
                             <!--Configures the NSIS installer. See NSIS documentation.-->
@@ -109,16 +109,6 @@
 
         </plugins>
     </build>
-    <!-- <pluginRepositories> -->
-        <!-- <pluginRepository> -->
-            <!-- <id>getdown-maven-plugin-mvn-repo</id> -->
-            <!-- <url>https://raw.github.com/rockfireredmoon/getdown-maven-plugin/mvn-repo/</url> -->
-            <!-- <snapshots> -->
-                <!-- <enabled>true</enabled> -->
-                <!-- <updatePolicy>always</updatePolicy> -->
-            <!-- </snapshots> -->
-        <!-- </pluginRepository> -->
-    <!-- </pluginRepositories> -->
     <repositories>
         <repository>
             <id>codehaus-snapshots</id>
