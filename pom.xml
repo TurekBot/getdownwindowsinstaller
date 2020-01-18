@@ -26,11 +26,11 @@
             <!-- Creates the getdown (updates goal) and getdown-stub (stub goal) directory. -->
             <!-- The contents of the getdown directory need to go to your server (whatever is in the
             appbase tag) so that getdown can go get it and perform an update with it.-->
-            <!--The contents of the getdown-stub directory get used for the NSIS installer.-->
+            <!-- The contents of the getdown-stub directory get used for the NSIS installer. -->
             <plugin>
-                <groupId>org.icestuff</groupId>
-                <artifactId>getdown-maven-plugin</artifactId>
-                <version>0.0.3-SNAPSHOT</version>
+				<groupId>org.icestuff</groupId>
+				<artifactId>getdown-maven-plugin</artifactId>
+				<version>0.9.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -96,7 +96,7 @@
                         </goals>
                         <configuration>
                             <!--Default Value: C:/Program Files/NSIS/makensis.exe-->
-                            <!--<makensisBin>C:/Program Files (x86)/NSIS/makensis.exe</makensisBin>-->
+                            <makensisBin>C:\Program Files\NSIS\makensis.exe</makensisBin>
                             <!--The name of the installer-->
                             <outputFile>${project.name}-installer.exe</outputFile>
                             <!--Configures the NSIS installer. See NSIS documentation.-->
@@ -108,16 +108,16 @@
 
         </plugins>
     </build>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>getdown-maven-plugin-mvn-repo</id>
-            <url>https://raw.github.com/rockfireredmoon/getdown-maven-plugin/mvn-repo/</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <!-- <pluginRepositories> -->
+        <!-- <pluginRepository> -->
+            <!-- <id>getdown-maven-plugin-mvn-repo</id> -->
+            <!-- <url>https://raw.github.com/rockfireredmoon/getdown-maven-plugin/mvn-repo/</url> -->
+            <!-- <snapshots> -->
+                <!-- <enabled>true</enabled> -->
+                <!-- <updatePolicy>always</updatePolicy> -->
+            <!-- </snapshots> -->
+        <!-- </pluginRepository> -->
+    <!-- </pluginRepositories> -->
     <repositories>
         <repository>
             <id>codehaus-snapshots</id>
